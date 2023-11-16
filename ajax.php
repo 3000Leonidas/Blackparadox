@@ -1,5 +1,5 @@
 <?php 
-if (!isset($_POST)){
+if (empty($_POST)){
     die('No Autorizado');
 }
 
