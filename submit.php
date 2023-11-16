@@ -69,6 +69,3 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
-<br>
-<a href="contacto.html">Regresa</a>
