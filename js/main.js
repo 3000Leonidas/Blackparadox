@@ -6,7 +6,7 @@ function do_contact_form(event) {
     event.preventDefault();
     
     var data = new FormData($('#do_contact_form').get(0)),
-    wrapper_msg = $('wraper_msg'),
+    wrapper_msg = $('.wraper_msg'),
     wrapper_contact_form = $('.wrapper_contact_form'),
     submit_button = $('.submit_button');
     submit_button_default =submit_button.html();

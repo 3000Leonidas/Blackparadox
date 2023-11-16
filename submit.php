@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    $para ="andresist3mas@gmail.com";
+    $para ="leconaandre51@gmail.com";
     $de = $para;
 
     //asunto del corrreo

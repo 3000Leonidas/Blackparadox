@@ -17,7 +17,7 @@ function json_output($status = 200, $msg ='OK', $data = []){
         json_output(400, 'Ingrese un email valido.');
     }
 
-    if(empty($_POST('tel'))){
+    if(empty($_POST['tel'])){
         json_output(400, 'Ingrese un telefono valido.');
     }   
     if (empty($_POST['mensaje']) || strlen($_POST['mensaje'] < 5)){
@@ -30,8 +30,8 @@ function json_output($status = 200, $msg ='OK', $data = []){
     $info['email']=$_POST['email'];
     $info['tel']=$_POST['tel'];
     $info['mensaje']=$_POST['mensaje'];
-    $info['ip']=$_POST['REMOTE_ADDR'];
-    $info['fecha']=$_POST['d M Y h:m:s'];
+    $info['ip']=$_SERVER['REMOTE_ADDR'];
+    $info['fecha']=date('d M Y h:m:s');
 
     //remitente
     $para =$_POST['email'];
@@ -44,8 +44,8 @@ function json_output($status = 200, $msg ='OK', $data = []){
 
     //cabeceras que aparecen arriba de tu correo
     $headers = "From: $de\r\n";
-    $headers = "MIME-Verasion: 1.0\r\n";
-    $headers = "Content-type: text/html; charset=uft-8\r\n";
+    $headers .= "MIME-Verasion: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=uft-8\r\n";
 
 
     //Mensaje del correo
